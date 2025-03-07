@@ -8,7 +8,7 @@ import tailwind from "@astrojs/tailwind";
 export const siteUrl = "https://BrianPhiri.github.io/all-about-me";
 
 const date = new Date().toISOString();
-// https://astro.build/config
+
 export default defineConfig({
   site: siteUrl + "/",
   base: "/all-about-me",
@@ -31,6 +31,11 @@ export default defineConfig({
   prerender: true,
   vite: {
     plugins: [CompressionPlugin(), svgr()],
+    build: {
+      rollupOptions: {
+        external: ['fsevents']
+      }
+    }
   },
   buildOptions: {
     minify: true,
