@@ -1,0 +1,73 @@
+---
+import Hero from "@libs/ui/blocks/Hero/Hero";
+import GridSection from "@libs/ui/blocks/GridSection/GridSection";
+import Layout from "layouts/Layout.astro";
+import { WhatIDo } from "@libs/ui/blocks/WhatIDo/WhatIDo";
+import Contact from "@libs/ui/blocks/Contact/Contact";
+---
+
+<Layout
+    title="Brian Phiri"
+    description=""
+>
+    <main class="bg-background">
+        <Hero
+            name="Brian Phiri"
+            biography="Hi, I’m Brian—a tech-savvy problem solver passionate about building resilient systems and making life easier through automation. With a knack for cloud infrastructure, CI/CD pipelines, and all things Kubernetes, I’ve spent years turning complex challenges into streamlined solutions that scale."
+            skills={[
+               "Consultancy",
+                "Android development",
+                "System design",
+                "Backend devlopment",
+                "IaC",
+                "Docker",
+                "k8s", 
+                "vertualization", "Cloud",
+                "DevOps","Monitoring", "Intergaration", "Distributated systems", "Self-hosting"
+            ]}
+            socialLinks={[
+                {
+                    href: "https://github.com/BrianPhiri",
+                    icon: "github",
+                    label: "GitHub",
+                },
+                {
+                    href: "https://linkedin.com/in/brianphiri",
+                    icon: "linkedin",
+                    label: "LinkedIn",
+                },
+                {
+                    href: "https://twitter.com",
+                    icon: "twitter",
+                    label: "Twitter",
+                },
+                { href: "mailto:contact@brianphiri.com", icon: "mail", label: "Email" },
+                {
+                    href: "https://blogs.brianphiri.com",
+                    icon: "external-link",
+                    label: "Portfolio",
+                },
+            ]}
+            stats={[
+                { title: "Years of Experience", value: 13, suffix: "+" },
+                { title: "Services running (Homelab)", value: 32 },
+                { title: "Fucks given", value: 0 },
+            ]}
+            image={{
+                src: "https://img.freepik.com/free-photo/front-view-woman-posing-futuristic-portrait_23-2151178964.jpg?t=st=1740413518~exp=1740417118~hmac=5b2f9bea0e0ec7d633b9062f037048ed90b48389ee32635ac518bbfcc1b4b9dd&w=740",
+                alt: "Profile Photo",
+            }}
+            client:load
+        />
+    </main>
+
+    <style is:global>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</Layout>
