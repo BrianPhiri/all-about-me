@@ -30,10 +30,13 @@ export default defineConfig({
   renderers: ["@astrojs/renderer-react"],
   prerender: true,
   vite: {
+    resolve: {
+      preserveSymlinks: true,
+    },
     plugins: [CompressionPlugin(), svgr()],
     build: {
       rollupOptions: {
-        external: ['fsevents']
+        external: ['fsevents', /^\.\.\/pkg/]
       }
     }
   },
